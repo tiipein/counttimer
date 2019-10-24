@@ -261,10 +261,6 @@ export default class App extends React.Component {
 
   render() {
     const platform = Platform.OS === 'ios' ? 'ios' : 'android';
-
-   
-
-
     return (
 
       
@@ -465,6 +461,7 @@ const styles = StyleSheet.create({
 
   },
   content: {
+    // flex:1,
     height: '30%',
     width: '50%',
 
@@ -477,11 +474,11 @@ const styles = StyleSheet.create({
 
   display: {
     flex: 1,
-    marginTop: 32,
+    marginTop: 52,
     alignItems: 'center',
     justifyContent: 'center',
     height:'40%',
-    paddingTop: 90,
+    
   },
 
   logs: {

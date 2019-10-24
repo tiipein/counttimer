@@ -53,7 +53,7 @@ export default class TodoApp extends React.Component {
     this.state = {
       todoList: [],
       currentIndex: 0,
-      inputText: "", // テキスト入力用の箱を用意
+      inputText1: "", // テキスト入力用の箱を用意
       filterText: "",
     }
   }
@@ -82,7 +82,7 @@ export default class TodoApp extends React.Component {
   }
 
   addTodo = () => {
-    let title = this.state.inputText;
+    let title = this.state.inputText1;
     if (title == "") {
       return
     }
@@ -93,7 +93,7 @@ export default class TodoApp extends React.Component {
     this.setState({  //最後に、this.setState を使って状態の書き換え
       todoList: todoList,
       currentIndex: index,
-      inputText: "",
+      inputText1: "",
     });
     this.saveTodo(todoList); // saveTodo に addTodo で作られたリストを渡す（上書き）
   }
@@ -153,9 +153,9 @@ export default class TodoApp extends React.Component {
         </ScrollView>
         <View style={styles.input}>
           <Input
-            style={styles.inputText}
-            onChangeText={(text) => this.setState({ inputText: text })}
-            value={this.state.inputText}
+            style={styles.inputText1}
+            onChangeText={(text) => this.setState({ inputText1: text })}
+            value={this.state.inputText1}
           />
           <Button
             onPress={this.addTodo}
@@ -198,7 +198,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingRight: 60,
   },
-  inputText: {
+  inputText1: {
     flex: 1, // 残りをビーっと伸びてくれる
     padding: 10,
   },
